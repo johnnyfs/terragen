@@ -41,7 +41,7 @@ static inline void
 frame_strafe(struct frame *frame, float dpos)
 {
   GLfloat rot[16];
-  vec4 side = { -dpos, 0.0f, 0.0f, 1.0f }, out;
+  vec4 side = { dpos, 0.0f, 0.0f, 1.0f }, out;
 
   matrix4_yrot(rot, frame->yaw);
   matrix4_mult_vec4(&out, rot, &side);

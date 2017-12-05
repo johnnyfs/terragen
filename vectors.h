@@ -16,6 +16,14 @@ typedef struct vec4 {
 } vec4;
 
 static inline void
+vec3set(vec3 * restrict v, GLfloat x, GLfloat y, GLfloat z)
+{
+  v->x = x;
+  v->y = y;
+  v->z = z;
+}
+
+static inline void
 vec3iadd(vec3 * restrict self, const vec3 * restrict v)
 {
     self->x += v->x;
